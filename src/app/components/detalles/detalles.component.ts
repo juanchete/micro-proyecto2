@@ -15,7 +15,7 @@ export class DetallesComponent implements OnInit {
   pelicula: Movies;
   jsonPath = 'assets/json/movies.json';
  
-  constructor(private js: JsonService, private ar: ActivatedRoute) { }
+  constructor(private js: JsonService, public ar: ActivatedRoute) { }
 
   ngOnInit() {
 
