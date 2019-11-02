@@ -1,0 +1,29 @@
+<div class="container">
+        <form (ngSubmit)="onSubmit()" class="col s6">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" placeholder="Add Name" [(ngModel)]="compra.name"
+                         name="name">
+                         <label>Name</label>
+                    </div>
+                    
+                    <div class="input-field col s6">
+                        <input type="text" placeholder="Add Last Name" [(ngModel)]="compra.lastname"
+                         name="lastname">
+                         <label>Last Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                            <input type="text" placeholder="Movie" [(ngModel)]="compra.pelicula"
+                             name="pelicula">
+                             <label>Movie</label>
+                        </div>
+                        
+                        <div class="input-field col s6">
+                            <input type="text" placeholder="Add number of tickets" [(ngModel)]="compra.tickets"
+                             name="tickets">
+                             <label>Tickets</label>
+                        </div>
+                    <input type="submit" value="Submit" class="btn">
+                </div>
+            </form>
+</div>

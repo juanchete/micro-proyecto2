@@ -5,27 +5,27 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ItemsComponent } from './components/items/items.component';
 import {ItemService} from './services/item.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AddItemComponent } from './components/add-item/add-item.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JsonService } from './services/json.service';
+import { BuyService } from './services/buy.service';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { PlantillaComponent } from './home/plantilla/plantilla.component';
+import { BuyComponent } from './components/buy/buy.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ItemsComponent,
     NavbarComponent,
-    AddItemComponent,
     HomeComponent,
     DetallesComponent,
-    PlantillaComponent
+    PlantillaComponent,
+    BuyComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +36,7 @@ import { PlantillaComponent } from './home/plantilla/plantilla.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ItemService, JsonService],
+  providers: [ItemService, JsonService, BuyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

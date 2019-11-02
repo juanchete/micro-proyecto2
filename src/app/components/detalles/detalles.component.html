@@ -57,7 +57,7 @@
         
                 <div class="row">
                     <div *ngIf='!item.ComingSoon'>
-                            <a class="btn btn-primary" href="#" role="button">Comprar</a>
+                            <a class="btn btn-primary" role="button" routerLink="/buy" routerLinkActive>Buy</a>
                     </div>
                     <div *ngIf='item.ComingSoon'>
                             <h1>PROXIMAMENTE: {{item.Released}}</h1>
