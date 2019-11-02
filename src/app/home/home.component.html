@@ -1,0 +1,84 @@
+<hr>
+
+<h1 class="display-3 text-center">Estrenados</h1>
+
+<div class="container bg-light"  *ngFor='let item of cartelera'>
+
+    <div *ngIf='item.ComingSoon'>
+
+        <div>
+
+            <h1 class="display-4 text-center">{{item.Title}}</h1>
+
+
+                <div class="row">
+
+                    <div class="col text-center">
+
+                        <img src="{{item.Poster}}" alt="" width="250px" height="350px" class="img-thumbnail">
+
+                    </div>
+
+                    <div class="col">
+            
+            
+                        <div class="row">
+                            <strong>Generos: </strong> 
+                            {{item.Genre}}
+                        </div>
+                
+                        <div class="row">
+                            <strong>Idiomas: </strong>
+                            {{item.Language}}
+                        </div>
+
+                        <div class="row">
+                                <a routerLink="/{{item.Id}}" routerLinkActive>Mas Detalles</a>
+                        </div>
+            
+                    </div>
+                </div>
+        </div>
+        <hr>
+    </div>
+</div>
+
+<h1 class="display-3 text-center">Por Venir</h1>
+
+<div class="container bg-light"  *ngFor='let item of cartelera'>
+
+        <div *ngIf='!item.ComingSoon'>
+    
+            <div>
+    
+                <h1 class="display-4 text-center">{{item.Title}}</h1>
+    
+    
+                    <div class="row">
+    
+                        <div class="col text-center">
+    
+                            <img src="{{item.Poster}}" alt="" width="250px" height="350px" class="img-thumbnail">
+    
+                        </div>
+    
+                        <div class="col">
+                
+                
+                            <div class="row">
+                                <strong>Generos: </strong> 
+                                {{item.Genre}}
+                            </div>
+                    
+                            <div class="row">
+                                <strong>Idiomas: </strong>
+                                {{item.Language}}
+                            </div>
+                
+                            <!-- <a routerLink="/fd" routerLinkActive>Mas Detalles</a> -->
+                        </div>
+                    </div>
+            </div>
+            <hr>
+        </div>
+    </div>
