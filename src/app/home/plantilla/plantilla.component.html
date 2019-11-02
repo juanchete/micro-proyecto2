@@ -1,0 +1,29 @@
+<div class="clickable" (click)="checkMovieDetail(item.Title)">
+
+        <h1 class="display-4 text-center">{{item.Title}}</h1>
+
+
+            <div class="row">
+
+                <div class="col text-center">
+
+                    <img src="{{item.Poster}}" alt="" width="250px" height="350px" class="img-thumbnail">
+
+                </div>
+
+                <div class="col">
+        
+        
+                    <div class="row">
+                        <strong>Genre: </strong> 
+                        {{item.Genre}}
+                    </div>
+            
+                    <div class="row">
+                        <strong>Language: </strong>
+                        {{item.Language}}
+                    </div>
+        
+                </div>
+            </div>
+    </div>

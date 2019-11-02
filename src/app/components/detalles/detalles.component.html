@@ -1,1 +1,74 @@
-<p>detalles works!</p>
+<div *ngFor='let item of cartelera'>
+
+<div *ngIf='item.Title==this.ar.snapshot.queryParams.name'>
+
+        <h1 class="display-4 text-center">{{item.Title}}</h1>
+
+
+        <div class="row container">
+
+            <div class="col text-center">
+
+                <img src="{{item.Poster}}" alt="" width="250px" height="350px" class="img-thumbnail">
+                <hr>
+                <div class="row">
+                        <img src="{{item.Images}}" alt="" height="75px" width="50px">
+                        
+                </div>
+                
+            </div>
+
+            <div class="col">
+    
+                <div class="row">
+                        <strong>Plot: </strong> 
+                        {{item.Plot}}
+                </div>
+                
+                <div class="row">
+                            <strong>Year: </strong>
+                            {{item.Year}}
+                </div>
+
+                <div class="row">
+                    <strong>Genres: </strong> 
+                    {{item.Genre}}
+                </div>
+        
+                <div class="row">
+                    <strong>Runtime: </strong>
+                    {{item.Runtime}}
+                </div>
+
+                <div class="row">
+                        <strong>Director: </strong> 
+                        {{item.Director}}
+                </div>
+                
+                <div class="row">
+                            <strong>Actors: </strong>
+                            {{item.Actors}}
+                </div>
+
+                <div class="row">
+                    <strong>Awards: </strong> 
+                    {{item.Awards}}
+                </div>
+        
+                <div class="row">
+                    <div *ngIf='!item.ComingSoon'>
+                            <a class="btn btn-primary" href="#" role="button">Comprar</a>
+                    </div>
+                    <div *ngIf='item.ComingSoon'>
+                            <h1>PROXIMAMENTE: {{item.Released}}</h1>
+                        </div>
+                </div>
+    
+            </div>
+        </div>
+
+</div>    
+
+</div>
+
+

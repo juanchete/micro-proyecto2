@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JsonService } from './services/json.service';
 import { DetallesComponent } from './components/detalles/detalles.component';
+import { PlantillaComponent } from './home/plantilla/plantilla.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DetallesComponent } from './components/detalles/detalles.component';
     NavbarComponent,
     AddItemComponent,
     HomeComponent,
-    DetallesComponent
+    DetallesComponent,
+    PlantillaComponent
   ],
   imports: [
     BrowserModule,
